@@ -231,6 +231,51 @@ button:hover {
   background-color: #FFB964;
 }
 
+footer {
+  padding: 4rem 1.25rem 5rem;
+}
+@media (min-width: 48rem) {
+  footer {
+    padding: 4rem 2.5rem 5rem;
+  }
+  footer .flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+@media (min-width: 70rem) {
+  footer {
+    padding: 4rem 10rem 5rem;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+  footer .flex {
+    display: flex;
+    gap: 18rem;
+  }
+}
+footer .logo {
+  margin-bottom: 2rem;
+}
+footer .contact {
+  margin-bottom: 2rem;
+}
+footer .contact p {
+  line-height: 1.5rem;
+}
+@media (min-width: 48rem) {
+  footer .contact {
+    margin: 0;
+  }
+}
+footer .contact a {
+  text-decoration: none;
+  color: #191826;
+  font-weight: 700;
+  line-height: 1.5rem;
+}
 footer .socials {
   display: flex;
   gap: 2rem;
