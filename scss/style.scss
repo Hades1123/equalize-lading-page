@@ -1,0 +1,188 @@
+@use "sass:map";
+
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&display=swap");
+
+$primary-font-family: "IBM Plex Sans";
+$primary-color: #191826;
+$breakPoints: (
+    "md":48rem,
+    "lg":64rem,
+);
+
+@mixin respond($size) {
+    @media (min-width: map.get($breakPoints, #{$size})) {
+        @content
+    }
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    color: $primary-color;
+    font-family: $primary-font-family;
+    font-style: normal;
+    font-size: 1rem;
+}
+
+body {
+    background-color: #FCFAF9;
+    background: url('/assets/bg-main-mobile.png');
+    background-position: top -12rem right -12rem;
+    background-size: auto;
+    background-repeat: no-repeat;
+}
+
+header {
+    margin-bottom: 4rem;
+    padding: 4rem 1.25rem 0rem;
+}
+
+button {
+    border: unset;
+    border-radius: 0.75rem;
+    display: flex;
+    padding: 1rem 2rem;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    width: 100%;
+    font-size: 1.125rem;
+    font-weight: 700;
+    line-height: 2.025rem;
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.title {
+    padding: 0rem 1.25rem;
+
+    h1 {
+        max-width: 21rem;
+        font-size: 2.5rem;
+        font-weight: 700;
+        line-height: 2.5rem;
+        letter-spacing: -0.0625rem;
+        margin-bottom: 2.5rem;
+    }
+
+    p {
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 1.5rem;
+        max-width: 21rem;
+        margin-bottom: 10.87rem;
+    }
+}
+
+.content {
+    background: #191826 url('/assets/bg-pattern-2.svg') no-repeat top left 2rem;
+
+    img {
+        max-width: 13rem;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+        top: -6.87rem;
+    }
+
+    .premium {
+        background-color: #FA7453;
+        padding: 3rem 1.25rem 6.94rem;
+
+        h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            line-height: 2.75rem;
+            margin-bottom: 1.5rem;
+        }
+
+        p {
+            font-size: 1rem;
+            font-weight: 400;
+            line-height: 1.5rem;
+            margin-bottom: 2.5rem;
+            max-width: 21rem;
+        }
+
+        .price {
+            font-size: 1.25rem;
+            font-weight: 400;
+            line-height: 1.875rem;
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+            margin-bottom: 3rem;
+
+            .large {
+                font-size: 4rem;
+                font-weight: 700;
+                line-height: 4.4rem;
+            }
+        }
+
+        button:first-of-type {
+            margin-bottom: 1rem;
+            color: #FCFAF9;
+            background-color: #191826;
+
+            &:hover {
+                background-color: #66E2DC;
+                color: #191826;
+            }
+        }
+
+        button:last-of-type {
+            color: #191826;
+
+            &:hover {
+                background-color: #FFB964;
+            }
+        }
+    }
+}
+
+footer {
+    padding: 4rem 1.25rem 5rem;
+
+    img {
+        margin-bottom: 2rem;
+    }
+
+    .contact {
+        margin-bottom: 2rem;
+
+        p {
+            font-weight: 400;
+            line-height: 1.5rem;
+        }
+
+        a {
+            text-decoration: none;
+            color: var(--color-slate, #191826);
+            font-weight: 700;
+            line-height: 1.5rem;
+        }
+    }
+
+    .socials {
+        display: flex;
+        gap: 2rem;
+        align-items: center;
+
+        li {
+            a {
+                text-decoration: none;
+                cursor: pointer;
+                color: #191826;
+
+                &:hover {
+                    color: orange;
+                }
+            }
+        }
+    }
+}
