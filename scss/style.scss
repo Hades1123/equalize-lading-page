@@ -4,14 +4,15 @@
 
 $primary-font-family: "IBM Plex Sans";
 $primary-color: #191826;
-$breakPoints: (
-    "md":48rem,
-    "lg":64rem,
+$breakpoints: (
+    "sm": 30rem,
+    "md": 48rem,
+    "lg": 70rem,
 );
 
 @mixin respond($size) {
-    @media (min-width: map.get($breakPoints, #{$size})) {
-        @content
+    @media (min-width: map.get($breakpoints, #{$size})) {
+        @content;
     }
 }
 
@@ -32,11 +33,30 @@ body {
     background-position: top -12rem right -12rem;
     background-size: auto;
     background-repeat: no-repeat;
+
+    @include respond("md") {
+        background-image: url('/assets/bg-pattern-1.svg'), url('/assets/bg-main-tablet.png');
+        background-position: top -2.5rem right -3.1rem, top -12rem left -25rem;
+    }
+
+    @include respond("lg") {
+        background-image: url('/assets/bg-pattern-1.svg'), url('/assets/bg-main-desktop.png');
+        background-position: top -2.5rem right;
+    }
 }
 
 header {
     margin-bottom: 4rem;
     padding: 4rem 1.25rem 0rem;
+
+    @include respond("md") {
+        padding: 4rem 2.75rem 0rem;
+        margin-bottom: 8rem;
+    }
+
+    @include respond("lg") {
+        padding: 4rem 10rem 0rem;
+    }
 }
 
 button {
@@ -51,6 +71,7 @@ button {
     font-size: 1.125rem;
     font-weight: 700;
     line-height: 2.025rem;
+    transition: all 0.3s ease;
 
     &:hover {
         cursor: pointer;
@@ -60,6 +81,14 @@ button {
 .title {
     padding: 0rem 1.25rem;
 
+    @include respond("md") {
+        padding: 0rem 2.75rem;
+    }
+
+    @include respond("lg") {
+        padding: 0rem 10rem;
+    }
+
     h1 {
         max-width: 21rem;
         font-size: 2.5rem;
@@ -67,6 +96,16 @@ button {
         line-height: 2.5rem;
         letter-spacing: -0.0625rem;
         margin-bottom: 2.5rem;
+
+        @include respond("md") {
+            font-size: 4rem;
+            line-height: 4rem;
+            max-width: 26rem;
+        }
+
+        @include respond("lg") {
+            max-width: 82.85%;
+        }
     }
 
     p {
@@ -75,11 +114,34 @@ button {
         line-height: 1.5rem;
         max-width: 21rem;
         margin-bottom: 10.87rem;
+
+        @include respond("md") {
+            max-width: 31.5rem;
+            font-size: 1.125rem;
+            line-height: 1.6875rem;
+            margin-bottom: 17rem;
+        }
+
+        @include respond("lg") {
+            max-width: 68.5%;
+        }
     }
 }
 
 .content {
     background: #191826 url('/assets/bg-pattern-2.svg') no-repeat top left 2rem;
+
+    @include respond("md") {
+        margin: 0rem 2.75rem 12.5rem;
+        border-radius: 0.75rem;
+        background-position: left top;
+        position: relative;
+    }
+
+    @include respond("lg") {
+        margin: 0rem 10rem 12.5rem;
+        background-position: top left 33%;
+    }
 
     img {
         max-width: 13rem;
@@ -87,11 +149,38 @@ button {
         left: 50%;
         transform: translateX(-50%);
         top: -6.87rem;
+
+        @include respond("md") {
+            max-width: 17rem;
+            left: 2.68rem;
+            transform: unset;
+        }
+
+        @include respond("lg") {
+            max-width: 17.5rem;
+            left: 10%;
+            top: -8rem;
+        }
     }
 
     .premium {
         background-color: #FA7453;
         padding: 3rem 1.25rem 6.94rem;
+
+        @include respond("md") {
+            max-width: 22.25rem;
+            border-radius: 1rem;
+            position: absolute;
+            top: 5rem;
+            right: 4rem;
+            padding: 3rem;
+        }
+
+        @include respond("lg") {
+            right: 7%;
+            width: 46%;
+            max-width: 32rem;
+        }
 
         h2 {
             font-size: 2.5rem;
@@ -105,7 +194,16 @@ button {
             font-weight: 400;
             line-height: 1.5rem;
             margin-bottom: 2.5rem;
-            max-width: 21rem;
+
+            @include respond("md") {
+                font-size: 1.125rem;
+                line-height: 1.6875rem;
+            }
+
+            @include respond("lg") {
+                font-size: 1.25rem;
+                line-height: 1.875rem;
+            }
         }
 
         .price {
@@ -146,42 +244,18 @@ button {
 }
 
 footer {
-    padding: 4rem 1.25rem 5rem;
-
-    img {
-        margin-bottom: 2rem;
-    }
-
-    .contact {
-        margin-bottom: 2rem;
-
-        p {
-            font-weight: 400;
-            line-height: 1.5rem;
-        }
-
-        a {
-            text-decoration: none;
-            color: var(--color-slate, #191826);
-            font-weight: 700;
-            line-height: 1.5rem;
-        }
-    }
-
     .socials {
         display: flex;
         gap: 2rem;
         align-items: center;
 
-        li {
-            a {
-                text-decoration: none;
-                cursor: pointer;
-                color: #191826;
+        a {
+            text-decoration: none;
+            cursor: pointer;
+            color: #191826;
 
-                &:hover {
-                    color: orange;
-                }
+            &:hover {
+                color: orange;
             }
         }
     }

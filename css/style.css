@@ -17,10 +17,33 @@ body {
   background-size: auto;
   background-repeat: no-repeat;
 }
+@media (min-width: 48rem) {
+  body {
+    background-image: url("/assets/bg-pattern-1.svg"), url("/assets/bg-main-tablet.png");
+    background-position: top -2.5rem right -3.1rem, top -12rem left -25rem;
+  }
+}
+@media (min-width: 70rem) {
+  body {
+    background-image: url("/assets/bg-pattern-1.svg"), url("/assets/bg-main-desktop.png");
+    background-position: top -2.5rem right;
+  }
+}
 
 header {
   margin-bottom: 4rem;
   padding: 4rem 1.25rem 0rem;
+}
+@media (min-width: 48rem) {
+  header {
+    padding: 4rem 2.75rem 0rem;
+    margin-bottom: 8rem;
+  }
+}
+@media (min-width: 70rem) {
+  header {
+    padding: 4rem 10rem 0rem;
+  }
 }
 
 button {
@@ -35,6 +58,7 @@ button {
   font-size: 1.125rem;
   font-weight: 700;
   line-height: 2.025rem;
+  transition: all 0.3s ease;
 }
 button:hover {
   cursor: pointer;
@@ -42,6 +66,16 @@ button:hover {
 
 .title {
   padding: 0rem 1.25rem;
+}
+@media (min-width: 48rem) {
+  .title {
+    padding: 0rem 2.75rem;
+  }
+}
+@media (min-width: 70rem) {
+  .title {
+    padding: 0rem 10rem;
+  }
 }
 .title h1 {
   max-width: 21rem;
@@ -51,6 +85,18 @@ button:hover {
   letter-spacing: -0.0625rem;
   margin-bottom: 2.5rem;
 }
+@media (min-width: 48rem) {
+  .title h1 {
+    font-size: 4rem;
+    line-height: 4rem;
+    max-width: 26rem;
+  }
+}
+@media (min-width: 70rem) {
+  .title h1 {
+    max-width: 82.85%;
+  }
+}
 .title p {
   font-size: 1rem;
   font-weight: 400;
@@ -58,9 +104,36 @@ button:hover {
   max-width: 21rem;
   margin-bottom: 10.87rem;
 }
+@media (min-width: 48rem) {
+  .title p {
+    max-width: 31.5rem;
+    font-size: 1.125rem;
+    line-height: 1.6875rem;
+    margin-bottom: 17rem;
+  }
+}
+@media (min-width: 70rem) {
+  .title p {
+    max-width: 68.5%;
+  }
+}
 
 .content {
   background: #191826 url("/assets/bg-pattern-2.svg") no-repeat top left 2rem;
+}
+@media (min-width: 48rem) {
+  .content {
+    margin: 0rem 2.75rem 12.5rem;
+    border-radius: 0.75rem;
+    background-position: left top;
+    position: relative;
+  }
+}
+@media (min-width: 70rem) {
+  .content {
+    margin: 0rem 10rem 12.5rem;
+    background-position: top left 33%;
+  }
 }
 .content img {
   max-width: 13rem;
@@ -69,9 +142,40 @@ button:hover {
   transform: translateX(-50%);
   top: -6.87rem;
 }
+@media (min-width: 48rem) {
+  .content img {
+    max-width: 17rem;
+    left: 2.68rem;
+    transform: unset;
+  }
+}
+@media (min-width: 70rem) {
+  .content img {
+    max-width: 17.5rem;
+    left: 10%;
+    top: -8rem;
+  }
+}
 .content .premium {
   background-color: #FA7453;
   padding: 3rem 1.25rem 6.94rem;
+}
+@media (min-width: 48rem) {
+  .content .premium {
+    max-width: 22.25rem;
+    border-radius: 1rem;
+    position: absolute;
+    top: 5rem;
+    right: 4rem;
+    padding: 3rem;
+  }
+}
+@media (min-width: 70rem) {
+  .content .premium {
+    right: 7%;
+    width: 46%;
+    max-width: 32rem;
+  }
 }
 .content .premium h2 {
   font-size: 2.5rem;
@@ -84,7 +188,18 @@ button:hover {
   font-weight: 400;
   line-height: 1.5rem;
   margin-bottom: 2.5rem;
-  max-width: 21rem;
+}
+@media (min-width: 48rem) {
+  .content .premium p {
+    font-size: 1.125rem;
+    line-height: 1.6875rem;
+  }
+}
+@media (min-width: 70rem) {
+  .content .premium p {
+    font-size: 1.25rem;
+    line-height: 1.875rem;
+  }
 }
 .content .premium .price {
   font-size: 1.25rem;
@@ -116,35 +231,16 @@ button:hover {
   background-color: #FFB964;
 }
 
-footer {
-  padding: 4rem 1.25rem 5rem;
-}
-footer img {
-  margin-bottom: 2rem;
-}
-footer .contact {
-  margin-bottom: 2rem;
-}
-footer .contact p {
-  font-weight: 400;
-  line-height: 1.5rem;
-}
-footer .contact a {
-  text-decoration: none;
-  color: var(--color-slate, #191826);
-  font-weight: 700;
-  line-height: 1.5rem;
-}
 footer .socials {
   display: flex;
   gap: 2rem;
   align-items: center;
 }
-footer .socials li a {
+footer .socials a {
   text-decoration: none;
   cursor: pointer;
   color: #191826;
 }
-footer .socials li a:hover {
+footer .socials a:hover {
   color: orange;
 }/*# sourceMappingURL=style.css.map */
