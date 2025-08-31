@@ -12,20 +12,20 @@ html {
 
 body {
   background-color: #FCFAF9;
-  background: url("/assets/bg-main-mobile.png");
+  background: url("../assets/bg-main-mobile.png");
   background-position: top -12rem right -12rem;
   background-size: auto;
   background-repeat: no-repeat;
 }
 @media (min-width: 48rem) {
   body {
-    background-image: url("/assets/bg-pattern-1.svg"), url("/assets/bg-main-tablet.png");
+    background-image: url("../assets/bg-pattern-1.svg"), url("../assets/bg-main-tablet.png");
     background-position: top -2.5rem right -3.1rem, top -12rem left -25rem;
   }
 }
 @media (min-width: 70rem) {
   body {
-    background-image: url("/assets/bg-pattern-1.svg"), url("/assets/bg-main-desktop.png");
+    background-image: url("../assets/bg-pattern-1.svg"), url("../assets/bg-main-desktop.png");
     background-position: top -2.5rem right;
   }
 }
@@ -119,7 +119,7 @@ button:hover {
 }
 
 .content {
-  background: #191826 url("/assets/bg-pattern-2.svg") no-repeat top left 2rem;
+  background: #191826 url("../assets/bg-pattern-2.svg") no-repeat top left 2rem;
 }
 @media (min-width: 48rem) {
   .content {
