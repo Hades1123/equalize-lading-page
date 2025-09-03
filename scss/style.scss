@@ -7,7 +7,7 @@ $primary-color: #191826;
 $breakpoints: (
     "sm": 30rem,
     "md": 48rem,
-    "lg": 70rem,
+    "lg": 90rem,
 );
 
 @mixin respond($size) {

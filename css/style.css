@@ -23,7 +23,7 @@ body {
     background-position: top -2.5rem right -3.1rem, top -12rem left -25rem;
   }
 }
-@media (min-width: 70rem) {
+@media (min-width: 90rem) {
   body {
     background-image: url("../assets/bg-pattern-1.svg"), url("../assets/bg-main-desktop.png");
     background-position: top -2.5rem right;
@@ -40,7 +40,7 @@ header {
     margin-bottom: 8rem;
   }
 }
-@media (min-width: 70rem) {
+@media (min-width: 90rem) {
   header {
     padding: 4rem 10rem 0rem;
   }
@@ -72,7 +72,7 @@ button:hover {
     padding: 0rem 2.75rem;
   }
 }
-@media (min-width: 70rem) {
+@media (min-width: 90rem) {
   .title {
     padding: 0rem 10rem;
   }
@@ -92,7 +92,7 @@ button:hover {
     max-width: 26rem;
   }
 }
-@media (min-width: 70rem) {
+@media (min-width: 90rem) {
   .title h1 {
     max-width: 82.85%;
   }
@@ -112,7 +112,7 @@ button:hover {
     margin-bottom: 17rem;
   }
 }
-@media (min-width: 70rem) {
+@media (min-width: 90rem) {
   .title p {
     max-width: 68.5%;
   }
@@ -129,7 +129,7 @@ button:hover {
     position: relative;
   }
 }
-@media (min-width: 70rem) {
+@media (min-width: 90rem) {
   .content {
     margin: 0rem 10rem 12.5rem;
     background-position: top left 33%;
@@ -149,7 +149,7 @@ button:hover {
     transform: unset;
   }
 }
-@media (min-width: 70rem) {
+@media (min-width: 90rem) {
   .content img {
     max-width: 17.5rem;
     left: 10%;
@@ -170,7 +170,7 @@ button:hover {
     padding: 3rem;
   }
 }
-@media (min-width: 70rem) {
+@media (min-width: 90rem) {
   .content .premium {
     right: 7%;
     width: 46%;
@@ -195,7 +195,7 @@ button:hover {
     line-height: 1.6875rem;
   }
 }
-@media (min-width: 70rem) {
+@media (min-width: 90rem) {
   .content .premium p {
     font-size: 1.25rem;
     line-height: 1.875rem;
@@ -244,7 +244,7 @@ footer {
     justify-content: space-between;
   }
 }
-@media (min-width: 70rem) {
+@media (min-width: 90rem) {
   footer {
     padding: 4rem 10rem 5rem;
     display: flex;
